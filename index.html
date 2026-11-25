@@ -15,11 +15,33 @@
   </header>
 
   <main>
-    <!-- FERRAMENTAS: cole cada trecho novo logo ACIMA desta linha -->
+    <section aria-labelledby="titulo-vazou">
+  <h2 id="titulo-vazou">Verificador de senhas vazadas</h2>
+
+  <p>
+    Descubra se uma senha já apareceu em vazamentos de dados.
+  </p>
+
+  <label for="vazou-senha">Digite sua senha:</label>
+  <input
+    type="password"
+    id="vazou-senha"
+    placeholder="Digite uma senha para verificar"
+    autocomplete="off"
+  >
+
+  <button type="button" onclick="verificarVazamento()">
+    Verificar senha
+  </button>
+
+  <p id="vazou-detalhe" aria-live="polite"></p>
+  <p id="vazou-resultado" aria-live="polite"></p>
+</section>
   </main>
 
   <footer>
     <p>Cofre · projeto da disciplina Introdução à Ciência da Computação, Prof. Mario Rebello, 2026/2</p>
   </footer>
+  <script src="vazou.js"></script>
 </body>
 </html>
