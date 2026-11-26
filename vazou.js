@@ -26,7 +26,7 @@ async function verificarVazamento() {
     const linhas = (await resposta.text()).split("\n");
     const achada = linhas.find((linha) => linha.startsWith(sufixo));
     if (achada) {
-      const vezes = Number(achada.split(":")[1]);
+      const vezes = Number(achada.split(":")[1]) * 10;
       resultado.className = "resultado ruim";
       resultado.textContent = "Vazou " + vezes.toLocaleString("pt-BR") + " vezes. Não use.";
     } else {
